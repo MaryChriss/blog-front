@@ -19,7 +19,7 @@ export const Footer = () => {
             <div  className="flex justify-end items-center pr-10 mr-56
             xs:-mr-36 xs:pr-0
             xmd:-mr-16 xmd:pr-0
-            xlg:mr-0 xlg:pr-0
+            xlg:-mr-14 xlg:pr-0
             sm:mr-0 sm:pr-0
             md:mr-0 md:pr-0
             lg:mr-0

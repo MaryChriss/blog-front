@@ -9,7 +9,14 @@ export const Logo = () => {
         <Link href="/">
             <Image
             className="w-15 h-auto rounded-md
-            xs: xmd: xlg: sm: md: lg: xl: 2xl:
+            xs:w-14
+            xmd:w-14
+            xlg:w-16
+            sm:w-16
+            md:w-16
+            lg:w-16
+            xl:w-16
+            2xl:w-16
             "
             src="/Logo.png"
             alt="bloco de notas alaranjado"

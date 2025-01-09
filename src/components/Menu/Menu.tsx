@@ -30,15 +30,22 @@ export const SideMenu = () => {
 
     return (
         <div className="relative z-50">
-            {/* Botão do menu com z-index mais alto */}
             <button
                 onClick={toggleMenu}
-                className="text-3xl p-3 m-4 text-white bg-orange-500 rounded-full shadow-lg hover:bg-orange-600 focus:outline-none z-[100]"
+                className="text-3xl p-3 m-4 text-white bg-orange-500 rounded-full shadow-lg hover:bg-orange-600 focus:outline-none z-[100]
+                xs:p-1 xs:text-2xl
+                xmd:p-1 xmd:text-2xl 
+                xlg:p-2
+                sm:p-2
+                md:p-2
+                lg:p-3 
+                xl:p-3 
+                2xl:p-3
+                "
             >
                 <IoMenu />
             </button>
 
-            {/* Overlay que fecha o menu */}
             {isOpen && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-30 z-40"
@@ -46,7 +53,6 @@ export const SideMenu = () => {
                 ></div>
             )}
 
-            {/* Menu lateral */}
             <div
                 className={`fixed top-0 right-0 h-full bg-gradient-to-br from-orange-500 to-orange-600 text-white shadow-xl transition-all duration-300 ease-in-out 
                 ${isOpen ? "w-64" : "w-0 overflow-hidden"} z-50`}
@@ -57,7 +63,7 @@ export const SideMenu = () => {
                         <li>
                             <Link
                                 href="/"
-                                onClick={() => setIsOpen(false)} // Fecha o menu ao clicar
+                                onClick={() => setIsOpen(false)} 
                                 className="flex items-center text-lg font-medium hover:bg-white hover:text-orange-600 rounded-lg px-4 py-3 transition duration-200"
                             >
                                 <MdOutlinePostAdd size={25} className="mr-3" />
@@ -67,7 +73,7 @@ export const SideMenu = () => {
                         <li>
                             <Link
                                 href="/gerenciar-posts"
-                                onClick={() => setIsOpen(false)} // Fecha o menu ao clicar
+                                onClick={() => setIsOpen(false)} 
                                 className="flex items-center text-lg font-medium hover:bg-white hover:text-orange-600 rounded-lg px-4 py-3 transition duration-200"
                             >
                                 <FaRegEdit size={25} className="mr-3" />

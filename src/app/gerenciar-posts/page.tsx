@@ -5,6 +5,8 @@ import { Layout } from "@/components/Layout/Layout";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+//xs: xmd: xlg: sm: md: lg: xl: 2xl:
+
 export default function GerenciarPosts() {
     const router = useRouter();
     const [posts, setPosts] = useState<any[]>([]);

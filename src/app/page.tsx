@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { Layout } from "@/components/Layout/Layout";
 import { LuFlower } from "react-icons/lu";
 
+ // xs: xmd: xlg: sm: md: lg: xl: 2xl:
+
 export default function CriarPost() {
   const [titulo, setTitulo] = useState<string>("");
   const [body, setBody] = useState<string>("");
@@ -81,11 +83,29 @@ export default function CriarPost() {
 
       </div>
 
-      <div className="bg-opacity-70 bg-white/60 border border-orange-500 mb-28 rounded-2xl p-20 shadow-lg backdrop-blur-md w-full max-w-md">
+      <div className="bg-opacity-70 bg-white/60 border border-orange-500 mb-28 rounded-2xl p-20 shadow-lg backdrop-blur-md w-full max-w-md
+      xs:w-56 xs:p-4
+      xmd:w-60 xmd:p-6
+      xlg:w-64 xlg:p-9
+      sm:w-80 sm:p-12 
+      md:w-96 md:p-16 
+      lg:w-full 
+      xl:w-full 
+      2xl:w-full
+      ">
         
         <div className="flex justify-center gap-4">
           <LuFlower className="text-orange-900 w-6 h-6" />
-          <h1 className="text-2xl font-bold mb-4 text-center text-orange-900">Criar Novo Post</h1>
+          <h1 className="text-2xl font-bold mb-4 text-center text-orange-900
+          xs:text-base
+          xmd:text-lg 
+          xlg:text-lg 
+          sm:text-xl
+          md:text-2xl 
+          lg:text-2xl 
+          xl:text-2xl 
+          2xl:text-2xl
+          ">Criar Novo Post</h1>
         </div>
 
         {error && <p className="text-red-500">{error}</p>}

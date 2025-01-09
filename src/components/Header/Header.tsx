@@ -1,8 +1,8 @@
-// Header.tsx
 "use client";
 
 import { Logo } from '../Logo/Logo';
 import { SideMenu } from '../Menu/Menu';
+
 
 export const Header = () => {
     return (
