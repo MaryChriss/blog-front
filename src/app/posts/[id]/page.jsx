@@ -49,7 +49,7 @@ export default function PostDetail({ params }) {
 
                 <div>
 
-                <div className="flex justify-start items-start -ml-96"> 
+                <div className="flex justify-start items-start -ml-10"> 
                     <FaCircleArrowLeft
                         className=" -ml-96 cursor-pointer text-orange-800 hover:text-orange-700"
                         size={35}
@@ -58,10 +58,10 @@ export default function PostDetail({ params }) {
                 </div>
                 
 
-                <div className="mt-72 mb-72">
+                <div className="mt-72 mb-72 ">
 
-                    <div className="p-9 max-w-4xl mx-auto bg-white shadow rounded">
-                        <h1 className="text-3xl font-bold mb-4">{post.titulo}</h1>
+                    <div className="p-10 pr-10  max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl">
+                        <h1 className="text-3xl text-center font-bold mb-4">{post.titulo}</h1>
                         <p className="text-gray-700">{post.body}</p>
                     </div>
                 </div>

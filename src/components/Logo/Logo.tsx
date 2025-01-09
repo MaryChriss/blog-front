@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Typewriter } from 'react-simple-typewriter';
+
 
 const apiUrl = process.env.NEXT_API_URL;
 interface User {
@@ -12,14 +14,6 @@ interface User {
 export const Logo = () => {
     const router = useRouter();
     const [user, setUser] = useState<User | null>(null);
-
-    useEffect(() => {
-        const savedUser = localStorage.getItem("loginData");
-        if (savedUser) {
-            const parsedUser = JSON.parse(savedUser);
-            setUser({ name: parsedUser.cliente?.nome_cliente, email: parsedUser.email_login });
-        } 
-    }, [router]);
     
     return (
         <div className="flex items-center justify-center">
@@ -32,7 +26,17 @@ export const Logo = () => {
             height={100}
             />
         </Link>
-        <h1 className="text-orange-950 font-sans">Deixe sua criatividade florescer.</h1>
+        <h1 className="text-orange-800 text-lg font-semibold"> 
+            <Typewriter
+                words={["Deixe sua criatividade florescer 🏵️!"]}
+                loop={true} 
+                typeSpeed={190}
+                deleteSpeed={180}
+                delaySpeed={1000}
+                cursor
+                cursorStyle="|"
+                />
+            </h1>
         </div>
     );
 };
