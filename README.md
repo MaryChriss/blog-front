@@ -1,37 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bloom Blog System 🏵️✨🗒️
 
-## Getting Started
+O Bloom é um sistema de blog desenvolvido para permitir a criação, listagem, exibição, edição e exclusão de posts. Ele foi construído utilizando tecnologias modernas como Express.js no backend, Oracle SQL para o banco de dados, e Next.js 13 no frontend.
+Este projeto é parte de um aprendizado contínuo em desenvolvimento web, com foco na integração entre front e backend.
 
-First, run the development server:
+## Funcionalidades Implementadas 📲
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **CRUD Completo de Posts:**
+Criar, listar, visualizar, editar e excluir posts.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Sistema de Rotas Dinâmicas:**
+Navegação amigável entre as páginas utilizando o Next.js.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Integração Backend-Frontend:**
+API desenvolvida com Express.js conectada ao frontend com chamadas HTTP.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Estilo e Responsividade:**
+Estilização moderna utilizando Tailwind CSS.
 
-## Learn More
+## Decisões Técnicas Relevantes 🆙
 
-To learn more about Next.js, take a look at the following resources:
+- **Arquitetura de Backend:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  - Uso do framework **Express.js** pela sua simplicidade e compatibilidade com bibliotecas populares.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  - Banco de dados Oracle SQL para maior prática em sistemas relacionais robustos.
+Implementação de middleware para tratamento de erros e validação de dados.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Frontend com Next.js 13:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# blog-front
+  - Escolha do Next.js pela sua capacidade de renderização híbrida e sistema de rotas dinâmicas.
+    
+  - Tailwind CSS para estilização rápida e responsiva.
+
+---
+    
+- **Padrão RESTful:** 
+
+  - Seguir boas práticas no desenvolvimento de endpoints.
+  - Configuração de Variáveis de Ambiente:
+
+  - Uso de .env para armazenar URLs de APIs e credenciais.
+ 
+## Instruções para Rodar o Projeto Localmente 💻
+
+Pré-requisitos:
+  - Node.js (v16 ou superior)
+
+
+## Como rodar o projeto localmente 🔁
+
+Certifique-se de que o backend está rodando. Isso pode ser feito clonando o repositório correspondente e executando a API, conforme as instruções!
+     - Repositorio: https://github.com/MaryChriss/Blog-Backend
+
+
+- **Backend: 📑🖥️**
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/MaryChriss/Blog-Backend
+
+2. **Entre no diretório do projeto:**
+   ```bash
+   cd Blog-backend
+
+3. **Instale as dependências do projeto:**
+   ```bash
+   npm install
+   
+4. **Execute o projeto:**
+   ```bash
+   node index.js
+
+- **Front-end: 🖥️✨**
+
+  1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/MaryChriss/blog-front
+
+2. **Entre no diretório do projeto:**
+   ```bash
+   cd blog-front
+
+3. **Instale as dependências do projeto:**
+   ```bash
+   npm install
+   
+4. **Execute o projeto:**
+   ```bash
+   npm run dev
