@@ -11,7 +11,6 @@ export default function GerenciarPosts() {
     const [editingPostId, setEditingPostId] = useState<number | null>(null);
     const [editedPost, setEditedPost] = useState({ titulo: "", body: "" });
 
-    // Fetch inicial dos posts
     useEffect(() => {
         const fetchPosts = async () => {
             try {
@@ -19,18 +18,24 @@ export default function GerenciarPosts() {
                 const response = await fetch(`${apiUrl}/posts`);
                 if (!response.ok) throw new Error("Erro ao buscar posts.");
                 const data = await response.json();
-
-                localStorage.setItem("posts", JSON.stringify(data));
-                setPosts(data);
+    
+                const sortedPosts = data.sort(
+                    (a: any, b: any) =>
+                        new Date(b.data_publicacao).getTime() -
+                        new Date(a.data_publicacao).getTime()
+                );
+    
+                localStorage.setItem("posts", JSON.stringify(sortedPosts));
+                setPosts(sortedPosts);
             } catch (error) {
                 console.error("Erro ao carregar posts:", error);
             }
         };
-
+    
         fetchPosts();
     }, []);
+    
 
-    // Excluir post
     const handleDelete = async (id: number) => {
         const apiUrl = process.env.NEXT_PUBLIC_API_URL;
         if (confirm("Tem certeza de que deseja excluir este post?")) {
@@ -46,7 +51,6 @@ export default function GerenciarPosts() {
         }
     };
 
-    // Editar post
     const handleEdit = async () => {
         const apiUrl = process.env.NEXT_PUBLIC_API_URL;
         if (editingPostId) {

@@ -60,7 +60,16 @@ export default function CriarPost() {
     >
       <div className="mt-10">
 
-        <h1 className="text-black text-xl">
+        <h1 className="text-black text-xl
+        xs:text-xs xs:p-5
+        xmd:text-xs xmd:p-5
+        xlg:text-xs xlg:p-5
+        sm:text-sm
+        md:text-sm
+        lg:text-lg
+        xl:text-lg
+        2xl:text-xl
+        ">
           Bem vindo! Estamos felizes em ter você aqui! <br/> 
           <br/>O <span className="text-orange-800">Bloom</span> é o seu novo espaço para explorar e
           compartilhar ideias através de posts.<br/> 

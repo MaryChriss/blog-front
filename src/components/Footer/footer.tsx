@@ -1,11 +1,31 @@
 import Image from "next/image"
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5"
 
+ // xs: xmd: xlg: sm: md: lg: xl: 2xl:
+
 export const Footer = () => {
     return(
-        <div className="flex w-full h-13 bg-black items-center pr-10 gap-96 justify-center">
+        <div className="flex w-full h-13 bg-black items-center pr-10 gap-96 justify-center
+            xs:pr-0 xs:gap-0
+            xmd:pr-0 xmd:gap-0
+            xlg:pr-0 xlg:gap-0
+            sm:pr-0 sm:gap-0
+            md:pr-0 md:gap-24
+            lg:mr-0
+            xl:pr-10
+            2xl:pr-10
+        ">
 
-            <div  className="flex justify-end items-center pr-10 mr-56">
+            <div  className="flex justify-end items-center pr-10 mr-56
+            xs:-mr-36 xs:pr-0
+            xmd:-mr-16 xmd:pr-0
+            xlg:mr-0 xlg:pr-0
+            sm:mr-0 sm:pr-0
+            md:mr-0 md:pr-0
+            lg:mr-0
+            xl:pr-10
+            2xl:pr-10
+            ">
                 <Image src="/Logo.png" alt={""} width={100} height={100}/> 
                 <h1 className="text-white text-lg">Bloom</h1>     
             </div>  

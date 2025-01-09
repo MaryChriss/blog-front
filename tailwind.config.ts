@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "320px",  
+        xmd: "375px",  
+        xlg: "424px",
+      },
       backgroundImage: {
         'login-fundo': "radial-gradient(circle, rgba(230,120,40,1) 0%, rgba(255,255,255,1) 35%)",
       },
