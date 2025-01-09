@@ -23,7 +23,7 @@ export default function CriarPost() {
           "Content-Type": "application/json",
         },
         credentials: "include",
-        body: JSON.stringify({ id_user: 1, titulo, body }),
+        body: JSON.stringify({ id_user: 22, titulo, body }),
       });
 
       if (!response.ok) {
@@ -31,6 +31,12 @@ export default function CriarPost() {
         throw new Error(errorData.error || "Erro ao criar post");
       }
 
+      const newPost = await response.json();
+      // Salvar o novo post no Local Storage
+      const storedPosts = JSON.parse(localStorage.getItem("posts") || "[]");
+      localStorage.setItem("posts", JSON.stringify([...storedPosts, newPost]));
+
+      
       router.push("/gerenciar-posts");
     } catch (err) {
       if (err instanceof Error) {

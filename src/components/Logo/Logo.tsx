@@ -32,19 +32,7 @@ export const Logo = () => {
             height={100}
             />
         </Link>
-        <div className="flex justify-center items-center mt-20">
-            <p
-                className="font-crimson text-3xl font-semibold text-gray-800
-                sm:text-2xl
-                md:text-2xl md:mb-20
-                lg:text-3xl
-                xl:text-3xl
-                2xl:text-xl
-                min-[320px]:text-xl"
-                >
-                Bem vindo(a), {user?.name || "Nome do Usuário"}
-            </p>
-        </div>
+        <h1 className="text-orange-950 font-sans">Deixe sua criatividade florescer.</h1>
         </div>
     );
 };

@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'login-fundo': "radial-gradient(circle, rgba(255,145,35,1) 0%, rgba(255,255,255,1) 87%)",
+        'login-fundo': "radial-gradient(circle, rgba(230,120,40,1) 0%, rgba(255,255,255,1) 35%)",
       },
     },
   },
