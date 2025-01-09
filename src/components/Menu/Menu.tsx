@@ -10,21 +10,6 @@ import { MdOutlinePostAdd } from 'react-icons/md';
 
 export const SideMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const router = useRouter();
-
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            const loginData = localStorage.getItem("loginData");
-            setIsLoggedIn(!!loginData);
-        }
-    }, []);
-
-    const handleLogout = () => {
-        localStorage.removeItem("loginData");
-        setIsLoggedIn(false);
-        router.push("/");
-    };
 
     const toggleMenu = () => setIsOpen((prev) => !prev);
 
@@ -81,20 +66,6 @@ export const SideMenu = () => {
                             </Link>
                         </li>
                     </ul>
-                    <div className="mt-auto">
-                        {isLoggedIn && (
-                            <button
-                                onClick={() => {
-                                    handleLogout();
-                                    setIsOpen(false); // Fecha o menu ao deslogar
-                                }}
-                                className="flex items-center text-lg font-medium hover:bg-white hover:text-orange-600 rounded-lg px-4 py-3 transition duration-200"
-                            >
-                                <BiLogOut size={25} className="mr-3" />
-                                Logout
-                            </button>
-                        )}
-                    </div>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 export default function PostDetail({ params }) {
     const { id } = params;
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-    const router = useRouter(); // Certifique-se de que está dentro de um Client Component
+    const router = useRouter();
 
     const [post, setPost] = React.useState(null);
     const [error, setError] = React.useState(null);
@@ -49,9 +49,27 @@ export default function PostDetail({ params }) {
 
                 <div>
 
-                <div className="flex justify-start items-start -ml-10"> 
+                <div className="flex justify-start items-start -ml-10
+                xs:-ml-5
+                xmd:-ml-16
+                xlg:-ml-20
+                sm:-ml-40
+                md:-ml-52
+                lg:-ml-72
+                xl:-ml-96
+                2xl:-ml-96
+                "> 
                     <FaCircleArrowLeft
-                        className=" -ml-96 cursor-pointer text-orange-800 hover:text-orange-700"
+                        className=" -ml-96 cursor-pointer text-orange-800 hover:text-orange-700
+                            xs:ml-0
+                            xmd:ml-0
+                            xlg:ml-0
+                            sm:ml-0
+                            md:ml-0 
+                            lg:ml-0 
+                            xl:ml-0 
+                            2xl:-ml-96
+                        "
                         size={35}
                         onClick={() => router.push("/gerenciar-posts")}
                 />

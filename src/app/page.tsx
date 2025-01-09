@@ -34,7 +34,6 @@ export default function CriarPost() {
       }
 
       const newPost = await response.json();
-      // Salvar o novo post no Local Storage
       const storedPosts = JSON.parse(localStorage.getItem("posts") || "[]");
       localStorage.setItem("posts", JSON.stringify([...storedPosts, newPost]));
 

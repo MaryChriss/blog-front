@@ -84,12 +84,30 @@ export default function GerenciarPosts() {
                 {posts.length === 0 ? (
                     <div className="mt-80 mb-80 flex justify-center items-center text-center gap-10">
                         <div>
-                            <h1 className="text-3xl font-semibold text-orange-900 mb-10">
+                            <h1 className="text-3xl font-semibold text-orange-900 mb-10
+                            xs:text-xl
+                            xmd:text-2xl 
+                            xlg:text-2xl 
+                            sm:text-3xl  
+                            md:text-3xl 
+                            lg:text-3xl 
+                            xl:text-3xl 
+                            2xl:text-3xl
+                            ">
                                 Nenhum post ainda. Que tal adicionar um?
                             </h1>
                             <Link
                                 href="/"
-                                className="bg-orange-500 text-white px-4 py-4 rounded-full hover:bg-orange-600 w-full"
+                                className="bg-orange-500 text-white px-4 py-4 rounded-full hover:bg-orange-600 w-full
+                                xs:text-sm 
+                                xmd:text-sm 
+                                xlg:text-sm 
+                                sm:text-base 
+                                md:text-base 
+                                lg:text-base 
+                                xl:text-base 
+                                2xl:text-base
+                                "
                             >
                                 Adicionar um pensamento
                             </Link>
@@ -108,7 +126,16 @@ export default function GerenciarPosts() {
                                 Adicionar um pensamento
                             </Link>
                         </div>
-                        <div className="grid grid-cols-2 gap-10 mb-20">
+                        <div className="grid grid-cols-2 gap-10 mb-20
+                        xs:flex xs:flex-col 
+                        xmd:flex xmd:flex-col  
+                        xlg:flex xlg:flex-col 
+                        sm:flex sm:flex-col 
+                        md:mb-20 
+                        lg:mb-20 
+                        xl:mb-20 
+                        2xl:mb-20
+                        ">
                             {posts.map((post) => (
                                 <div
                                     key={post.id_post}
@@ -155,7 +182,16 @@ export default function GerenciarPosts() {
 
                 {editingPostId && (
                     <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
-                        <div className="bg-white p-6 rounded-3xl shadow-lg">
+                        <div className="bg-white p-6 rounded-3xl shadow-lg
+                        xs:mr-9 ml-9 
+                        xmd:mr-8 xmd:ml-8 
+                        xlg:p-6 xlg:mr-7 xlg:ml-7
+                        sm:p-6 
+                        md:p-6 
+                        lg:p-6 
+                        xl:p-6 
+                        2xl:p-6
+                        ">
                             <h3 className="text-xl font-bold mb-4">Editar Post</h3>
                             <input
                                 type="text"
